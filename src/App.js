@@ -1,9 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import useWindowWidth from "./hooks/useWindowWidth";
+import withHasMounted from "./hocs/withHasMounted";
+import useHasMounted from "./hooks/useHasMounted";
 
-function App() {
+function App({ hasMounted }) {
   const width = useWindowWidth();
+  const hasMountedFromHooks = useHasMounted();
+
+  console.log(hasMounted, hasMountedFromHooks);
 
   return (
     <div className="App">
@@ -15,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default withHasMounted(App);
