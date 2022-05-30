@@ -3,6 +3,7 @@ import "./App.css";
 import useWindowWidth from "./hooks/useWindowWidth";
 import withHasMounted from "./hocs/withHasMounted";
 import useHasMounted from "./hooks/useHasMounted";
+import Hookprac6 from "./components/Hookprac6";
 
 function App({ hasMounted }) {
   const width = useWindowWidth();
@@ -15,6 +16,7 @@ function App({ hasMounted }) {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {width}
+        <Hookprac6 />
       </header>
     </div>
   );
